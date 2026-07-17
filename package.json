@@ -1,0 +1,20 @@
+{
+  "name": "pi-extension-peer-dependency-repro",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Reproduces Pi's managed npm installation omitting a documented extension peer dependency.",
+  "keywords": ["pi-package", "reproduction"],
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*",
+    "typebox": "*"
+  },
+  "peerDependenciesMeta": {
+    "@earendil-works/pi-coding-agent": {
+      "optional": true
+    }
+  },
+  "pi": {
+    "extensions": ["./extensions/index.js"]
+  }
+}
